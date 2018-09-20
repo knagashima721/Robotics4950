@@ -29,8 +29,9 @@ public class OpMode extends LinearOpMode {
         // Wait for the game to start (driver presses PLAY)
         waitForStart();
 
-        // run until the end of the match (driver presses STOP)
+        // target power variable
         double tgtPower = 0;
+        // infinite loop until driver presses STOP
         while (opModeIsActive()) {
             tgtPower = -this.gamepad1.left_stick_y;
             motorTest.setPower(tgtPower);
